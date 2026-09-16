@@ -1,10 +1,5 @@
 """Starting point for a group's player.
 
-Copy this whole directory to ``players/player_<k>/`` using your group number,
-then rename the class to ``Player<k>``. Group 4 would end up with
-``players/player_4/player.py`` containing ``class Player4``. The registry looks
-for exactly that; nothing else needs editing.
-
 Keep the ``__init__.py``. Discovery uses ``pkgutil.iter_modules``, which only
 reports directories that have one, so a group directory without it is silently
 invisible to the simulator - no error, just a player that never turns up.
@@ -18,7 +13,6 @@ from models.player import Player as BasePlayer
 
 
 class Player6(BasePlayer):
-	"""Rename me to Player<k>, where <k> is your group number."""
 
 	def __init__(self, snapshot: PlayerSnapshot, ctx: GameContext) -> None:
 		super().__init__(snapshot, ctx)
